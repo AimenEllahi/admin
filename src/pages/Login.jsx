@@ -7,7 +7,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    //redirect to dashboard
     navigate("/dashboard");
   };
 

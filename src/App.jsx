@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import Add from "./pages/Add";
+import View from "./pages/View";
 
 const routes = [
   {
@@ -18,6 +20,23 @@ const routes = [
       </Layout>
     ),
   },
+  {
+    path: "/records/add",
+    element: (
+      <Layout>
+        <Add />
+      </Layout>
+    ),
+  },
+  {
+    path: "/records/view",
+    element: (
+      <Layout>
+        <View />
+      </Layout>
+    ),
+  },
+
   // Add more routes as needed
 ];
 
