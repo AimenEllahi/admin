@@ -4,7 +4,7 @@ export default function Add() {
   return (
     <div className="p-5 flex w-5/5 h-full flex-col py-10">
       <div className="flex flex-col">
-        <span className="text-3xl font-semibold">Add Records</span>
+        <span className="text-3xl font-semibold">Add Products</span>
         <span>You can upload a excel sheet</span>
       </div>
 

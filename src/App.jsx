@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
@@ -6,6 +5,10 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Add from "./pages/Add";
 import View from "./pages/View";
+import Dealers from "./pages/Dealers";
+import Ambassador from "./pages/Ambassador";
+import Warranty from "./pages/Warranty";
+import SalesRep from "./pages/SalesRep";
 
 const routes = [
   {
@@ -21,7 +24,7 @@ const routes = [
     ),
   },
   {
-    path: "/records/add",
+    path: "/add",
     element: (
       <Layout>
         <Add />
@@ -29,7 +32,7 @@ const routes = [
     ),
   },
   {
-    path: "/records/view",
+    path: "/view",
     element: (
       <Layout>
         <View />
@@ -37,7 +40,38 @@ const routes = [
     ),
   },
 
-  // Add more routes as needed
+  {
+    path: "/dealers",
+    element: (
+      <Layout>
+        <Dealers />
+      </Layout>
+    ),
+  },
+  {
+    path: "/ambassador",
+    element: (
+      <Layout>
+        <Ambassador />
+      </Layout>
+    ),
+  },
+  {
+    path: "/warranty",
+    element: (
+      <Layout>
+        <Warranty />
+      </Layout>
+    ),
+  },
+  {
+    path: "/salesrep",
+    element: (
+      <Layout>
+        <SalesRep />
+      </Layout>
+    ),
+  },
 ];
 
 const App = () => {

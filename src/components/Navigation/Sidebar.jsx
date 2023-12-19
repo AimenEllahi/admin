@@ -16,40 +16,36 @@ const Sidebar = () => {
       title: "Dashboard",
     },
     {
-      href: "",
+      href: "/view",
       icon: <Products className="w-6 h-6 text-current" />,
-      title: "Records",
-      subItems: [
-        {
-          href: "/records/view",
-          icon: <Products className="w-6 h-6 text-current" />,
-          title: "View",
-        },
+      title: "View Products",
+    },
 
-        {
-          href: "/records/add",
-          icon: <Products className="w-6 h-6 text-current" />,
-          title: "Add",
-        },
-      ],
+    // {
+    //   href: "/add",
+    //   icon: <Products className="w-6 h-6 text-current" />,
+    //   title: "Add Products",
+    // },
+
+    {
+      href: "/dealers",
+      icon: <Shop className="w-6 h-6 text-current" />,
+      title: "Dealers",
     },
     {
-      href: "",
+      href: "/ambassador",
       icon: <Products className="w-6 h-6 text-current" />,
-      title: "Users",
-      subItems: [
-        {
-          href: "",
-          icon: <Products className="w-6 h-6 text-current" />,
-          title: "View",
-        },
-
-        {
-          href: "",
-          icon: <Products className="w-6 h-6 text-current" />,
-          title: "Add",
-        },
-      ],
+      title: "Ambassador",
+    },
+    {
+      href: "/salesrep",
+      icon: <Products className="w-6 h-6 text-current" />,
+      title: "SalesRep",
+    },
+    {
+      href: "/warranty",
+      icon: <Products className="w-6 h-6 text-current" />,
+      title: "Warranty",
     },
   ];
 

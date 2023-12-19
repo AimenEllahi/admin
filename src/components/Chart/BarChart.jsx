@@ -1,56 +1,44 @@
-import React from "react";
-import { Bar } from "react-chartjs-2";
-
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
   Tooltip,
   Legend,
-} from "chart.js";
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+  CartesianGrid,
+} from "recharts";
+const data = [
+  { name: "Page A", uv: 400, pv: 2400, amt: 2400 },
+  { name: "Page B", uv: 300, pv: 1398, amt: 2210 },
+  { name: "Page C", uv: 200, pv: 9800, amt: 2290 },
+  { name: "Page D", uv: 278, pv: 3908, amt: 2000 },
+  { name: "Page E", uv: 189, pv: 4800, amt: 2181 },
+  { name: "Page F", uv: 239, pv: 3800, amt: 2500 },
+  { name: "Page G", uv: 349, pv: 4300, amt: 2100 },
+];
 
-const BarChart = () => {
-  // Example data for the bar chart
-  const data = {
-    labels: ["January", "February", "March", "April", "May"],
-    datasets: [
-      {
-        label: "Dataset 1",
-        data: [12, 19, 3, 5, 2],
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        borderColor: "rgba(75, 192, 192, 1)",
-        borderWidth: 1,
-      },
-      {
-        label: "Dataset 2",
-        data: [15, 7, 10, 8, 5],
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
-        borderWidth: 1,
-      },
-    ],
-  };
-
-  // Options for the chart
-  const options = {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  };
-
-  return <Bar data={data} options={options} />;
+const RenderBarChart = () => {
+  return (
+    <BarChart
+      width={500}
+      height={300}
+      data={data}
+      margin={{
+        top: 5,
+        right: 30,
+        left: 30,
+        bottom: 5,
+      }}
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="name" fontSize={12} />
+      <YAxis fontSize={12} />
+      <Tooltip />
+      <Legend />
+      <Bar dataKey="pv" fill="#8884d8" />
+      <Bar dataKey="uv" fill="#82ca9d" />
+    </BarChart>
+  );
 };
 
-export default BarChart;
+export default RenderBarChart;
