@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import UserProfileDropDown from "./UserProfileDropDown";
+
 import Dashboard from "../../assets/icons/system/Dashboard";
 import Shop from "../../assets/icons/system/Shop";
 import Products from "../../assets/icons/system/Products";
@@ -21,16 +21,15 @@ const Sidebar = () => {
       title: "View Products",
     },
 
-    // {
-    //   href: "/add",
-    //   icon: <Products className="w-6 h-6 text-current" />,
-    //   title: "Add Products",
-    // },
-
     {
       href: "/dealers",
       icon: <Shop className="w-6 h-6 text-current" />,
       title: "Dealers",
+    },
+    {
+      href: "/dealerdetails",
+      icon: <Products className="w-6 h-6 text-current" />,
+      title: "Dealer Details",
     },
     {
       href: "/ambassador",

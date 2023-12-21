@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "../components/Table";
+import TableComponent from "../components/TableComponent";
 
 const SALESREP_HEADERS = [
   "ID",
@@ -53,7 +53,7 @@ const SalesRep = () => {
       </div>
 
       {/* Sales Rep Table */}
-      <Table
+      <TableComponent
         headers={SALESREP_HEADERS}
         data={salesRepData}
         heading={"Sales Reps"}

@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "../components/Table";
+import TableComponent from "../components/TableComponent";
 
 const HEADERS = [
   "ArticleCode",
@@ -23,5 +23,5 @@ const data = [
 ];
 
 export default function View() {
-  return <Table headers={HEADERS} data={data} heading={"View"} />;
+  return <TableComponent headers={HEADERS} data={data} heading={"View"} />;
 }

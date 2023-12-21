@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "../components/Table";
+import TableComponent from "../components/TableComponent";
 
 const WARRANTY_HEADERS = [
   "ID",
@@ -22,7 +22,7 @@ const warrantyData = [
 
 const Warranty = () => {
   return (
-    <Table
+    <TableComponent
       headers={WARRANTY_HEADERS}
       data={warrantyData}
       heading={"Warranties"}

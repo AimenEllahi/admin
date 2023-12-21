@@ -1,6 +1,7 @@
 import React from "react";
+import { Table } from "@radix-ui/themes";
 
-const Table = ({ headers, data, heading }) => {
+const TableComponent = ({ headers, data, heading }) => {
   return (
     <div className="w-full p-5 py-10 flex flex-col gap-y-10 h-screen">
       <span className="text-3xl font-semibold">{heading}</span>
@@ -8,34 +9,35 @@ const Table = ({ headers, data, heading }) => {
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
             <div className="overflow-hidden">
-              <table className="min-w-full text-left text-sm font-light">
-                <thead className="border-b font-medium dark:border-neutral-500">
-                  <tr>
+              <Table.Root>
+                <Table.Header>
+                  <Table.Row>
                     {headers.map((header, index) => (
-                      <th key={index} scope="col" className="px-6 py-4">
+                      <Table.Cell key={index} scope="col" className="px-6 py-4">
                         {header}
-                      </th>
+                      </Table.Cell>
                     ))}
-                  </tr>
-                </thead>
-                <tbody>
+                  </Table.Row>
+                </Table.Header>
+
+                <Table.Body>
                   {data.map((row, rowIndex) => (
-                    <tr
+                    <Table.Row
                       key={rowIndex}
                       className="border-b font-normal dark:border-neutral-500"
                     >
                       {headers.map((header, colIndex) => (
-                        <td
+                        <Table.Cell
                           key={colIndex}
                           className="whitespace-nowrap px-6 py-4 font-medium"
                         >
                           {row[header]}
-                        </td>
+                        </Table.Cell>
                       ))}
-                    </tr>
+                    </Table.Row>
                   ))}
-                </tbody>
-              </table>
+                </Table.Body>
+              </Table.Root>
             </div>
           </div>
         </div>
@@ -44,4 +46,4 @@ const Table = ({ headers, data, heading }) => {
   );
 };
 
-export default Table;
+export default TableComponent;

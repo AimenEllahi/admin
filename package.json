@@ -12,6 +12,7 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@radix-ui/themes": "^2.0.3",
     "autoprefixer": "^10.4.16",
     "chart.js": "^4.4.1",
     "lucide-react": "^0.298.0",
@@ -19,6 +20,7 @@
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
     "react-router-dom": "^6.21.0",
     "recharts": "^2.10.3",
     "tailwindcss": "^3.3.6"

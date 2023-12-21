@@ -1,12 +1,12 @@
 import React from "react";
-import Table from "../components/Table";
+import TableComponent from "../components/TableComponent";
 const DEALER_HEADERS = [
-  "Dealer Code",
+  "DealerCode",
   "Name",
   "Location",
   "Status",
   "Contact",
-  "Registration Date",
+  "RegistrationDate",
 ];
 
 const dealerData = [
@@ -24,7 +24,11 @@ const dealerData = [
 export default function Dealers() {
   return (
     <div>
-      <Table headers={DEALER_HEADERS} data={dealerData} heading={"Dealers"} />
+      <TableComponent
+        headers={DEALER_HEADERS}
+        data={dealerData}
+        heading={"Dealers"}
+      />
     </div>
   );
 }

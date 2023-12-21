@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "../components/Table";
+import TableComponent from "../components/TableComponent";
 
 const AMBASSADOR_HEADERS = [
   "ID",
@@ -22,7 +22,7 @@ const ambassadorData = [
 
 const Ambassador = () => {
   return (
-    <Table
+    <TableComponent
       headers={AMBASSADOR_HEADERS}
       data={ambassadorData}
       heading={"Ambassadors"}
