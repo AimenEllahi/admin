@@ -10,6 +10,7 @@ import Ambassador from "./pages/Ambassador";
 import Warranty from "./pages/Warranty";
 import SalesRep from "./pages/SalesRep";
 import DealerDetails from "./pages/DealerDetails";
+import Editor from "./pages/Editor";
 import "@radix-ui/themes/styles.css";
 
 const routes = [
@@ -81,6 +82,10 @@ const routes = [
         <DealerDetails />
       </Layout>
     ),
+  },
+  {
+    path: "/editor",
+    element: <Editor />,
   },
 ];
 
