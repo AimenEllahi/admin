@@ -91,7 +91,7 @@ const routes = [
 const App = () => {
   return (
     <Router>
-      <Routes>
+      <Routes >
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />
         ))}
