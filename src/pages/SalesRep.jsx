@@ -1,21 +1,17 @@
 import React from "react";
 import TableComponent from "../components/TableComponent";
 
-const SALESREP_HEADERS = [
-  "ID",
-  "Name",
-  "Territory",
-  "Contact Email",
-  "Joining Date",
-];
+const SALESREP_HEADERS = ["ID", "Name", "Territory", "Joining Date", "Status"];
 
 const salesRepData = [
   {
     ID: 1,
     Name: "Jane Doe",
     Territory: "Region A",
-    ContactEmail: "jane@example.com",
-    JoiningDate: "2023-02-20",
+    Status: "Active",
+    "Joining Date": "2023-02-20",
+    image: "/user1.jpeg",
+    Email: "jane@gmail.com",
   },
   // Add more sales rep data as needed
 ];

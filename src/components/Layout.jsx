@@ -8,14 +8,14 @@ const Layout = ({ children }) => {
       style={{
         fontFamily: "Poppins, sans-serif",
       }}
-      className='flex flex-col w-screen h-screen overflow-hidden'
+      className="flex flex-col w-screen h-screen overflow-hidden"
     >
       {/* <Navbar /> */}
-      <div className='flex h-full '>
+      <div className="flex h-full ">
         <Sidebar />
 
         {/* Main Content */}
-        <div className='p-4 flex-1 bg-white '>{children}</div>
+        <div className="p-4 flex-1 bg-white">{children}</div>
       </div>
     </div>
   );

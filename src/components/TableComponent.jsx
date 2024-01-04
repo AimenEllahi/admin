@@ -13,7 +13,11 @@ const TableComponent = ({ headers, data, heading }) => {
                 <Table.Header>
                   <Table.Row>
                     {headers.map((header, index) => (
-                      <Table.Cell key={index} scope="col" className="px-6 py-4">
+                      <Table.Cell
+                        key={index}
+                        scope="col"
+                        className="px-6 py-4 font-bold"
+                      >
                         {header}
                       </Table.Cell>
                     ))}
@@ -27,11 +31,36 @@ const TableComponent = ({ headers, data, heading }) => {
                       className="border-b font-normal dark:border-neutral-500"
                     >
                       {headers.map((header, colIndex) => (
-                        <Table.Cell
-                          key={colIndex}
-                          className="whitespace-nowrap px-6 py-4 font-medium"
-                        >
-                          {row[header]}
+                        <Table.Cell key={colIndex} className="font-medium ">
+                          {header === "Name" ? (
+                            <div className="flex items-center">
+                              <div className="w-8 h-8 rounded-full border overflow-hidden mr-3">
+                                <img
+                                  src={row.image}
+                                  alt={row.Name}
+                                  className="w-full h-full object-cover"
+                                />
+                              </div>
+                              <div className="flex flex-col justify-between">
+                                <span>{row[header]}</span>
+                                <span className="block text-xs text-gray-500">
+                                  {row["Email"]}
+                                </span>
+                              </div>
+                            </div>
+                          ) : header === "Status" ? (
+                            <span
+                              className={`${
+                                row[header] === "Active"
+                                  ? "text-green-500 border px-2 py-1 rounded-lg border-green-500"
+                                  : "border-red-500 text-red-500 border px-2 py-1 rounded-lg"
+                              }`}
+                            >
+                              {row[header]}
+                            </span>
+                          ) : (
+                            <span>{row[header]}</span>
+                          )}
                         </Table.Cell>
                       ))}
                     </Table.Row>

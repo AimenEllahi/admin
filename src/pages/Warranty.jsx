@@ -3,18 +3,18 @@ import TableComponent from "../components/TableComponent";
 
 const WARRANTY_HEADERS = [
   "ID",
-  "ProductCode",
+  "Product Code",
   "Type",
-  "ExpirationDate",
+  "Expiration Date",
   "Status",
 ];
 
 const warrantyData = [
   {
     ID: 1,
-    ProductCode: "P001",
+    "Product Code": "P001",
     Type: "Extended",
-    ExpirationDate: "2023-12-31",
+    "Expiration Date": "2023-12-31",
     Status: "Active",
   },
   // Add more warranty data as needed
