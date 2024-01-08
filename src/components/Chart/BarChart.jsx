@@ -26,17 +26,18 @@ const RenderBarChart = () => {
       margin={{
         top: 5,
         right: 30,
-        left: 30,
+        left: 0,
         bottom: 5,
       }}
+      className='max-w-full'
     >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" fontSize={12} />
+      <CartesianGrid strokeDasharray='3 3' />
+      <XAxis dataKey='name' fontSize={12} />
       <YAxis fontSize={12} />
       <Tooltip />
       <Legend />
-      <Bar dataKey="pv" fill="#8884d8" />
-      <Bar dataKey="uv" fill="#82ca9d" />
+      <Bar dataKey='pv' fill='#8884d8' />
+      <Bar dataKey='uv' fill='#82ca9d' />
     </BarChart>
   );
 };
